@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karthik Reddy M — Java &amp; AI Engineer</title>
+  <title>Karthik Reddy M | Java &amp; AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -287,6 +287,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.875rem;
+      overflow: hidden;
       transition: border-color 0.2s, transform 0.2s;
     }
 
@@ -562,7 +563,7 @@
         I'm a Java and AI engineer with over five years of production experience designing distributed systems and
         intelligent applications. My current work at <strong>Dechen Consulting (Ford Motor Company)</strong> centers on
         LangChain-based RAG pipelines running on Vertex AI, dynamic model routing across GPT-4, Gemini, and Claude,
-        and Spring Boot microservices backing Angular enterprise UIs — with SonarQube, FOSSA, and Cycode gates
+        and Spring Boot microservices backing Angular enterprise UIs, with SonarQube, FOSSA, and Cycode quality gates
         baked into every CI run.
       </p>
       <p>
@@ -664,13 +665,13 @@
 
       <!-- TechMate -->
       <div class="card">
-        <h3>TechMate — Voice AI Assistant</h3>
+        <img src="https://source.unsplash.com/featured/800x400?voice,technology" alt="TechMate Voice AI Assistant" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>TechMate: Voice AI Assistant</h3>
         <p>
-          A real-time voice assistant built specifically for senior users — GCP Speech-to-Text streams audio input into a
-          FastAPI inference layer that composes prompts for OpenAI, then pushes responses back through a React frontend.
-          The behaviorally interesting piece is a KMeans clustering model that profiles each user's interaction patterns
-          over time, feeding a custom context manager that prunes conversation history intelligently instead of sliding
-          a fixed window.
+          A real-time voice assistant built for senior users, combining GCP Speech-to-Text for audio capture with a
+          FastAPI inference layer that composes prompts for OpenAI and streams responses to a React frontend. A KMeans
+          clustering model profiles each user's interaction patterns over time, feeding a custom context manager that
+          prunes conversation history based on behavioral clusters rather than a naive sliding window.
         </p>
         <div class="badge-row">
           <span class="badge">React</span>
@@ -691,12 +692,14 @@
 
       <!-- agentic-lite -->
       <div class="card">
-        <h3>agentic-lite — Multi-Model AI Chat</h3>
+        <img src="https://source.unsplash.com/featured/800x400?artificial-intelligence,chat" alt="agentic-lite Multi-Model AI Chat" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>agentic-lite: Multi-Model AI Chat</h3>
         <p>
-          A general-purpose agentic UI that routes requests to OpenAI GPT or Google Gemini from a single Next.js
-          interface, with Prisma-backed SQLite persistence keeping conversation history across sessions. The architectural
-          challenge was a provider-agnostic streaming abstraction: both APIs emit tokens differently, and the React layer
-          needed to handle partial updates without markdown or code block rendering flickering mid-stream.
+          A general-purpose agentic chat interface that routes requests across OpenAI GPT and Google Gemini from a
+          single Next.js frontend, with Prisma-backed SQLite persistence for conversation history across sessions.
+          The core engineering challenge was a provider-agnostic streaming layer: both APIs deliver tokens differently,
+          so the React renderer needed a uniform buffering strategy to prevent markdown and code block flicker during
+          partial updates.
         </p>
         <div class="badge-row">
           <span class="badge">Next.js</span>
@@ -717,12 +720,14 @@
 
       <!-- utex -->
       <div class="card">
-        <h3>μTeX — Handwriting to LaTeX</h3>
+        <img src="https://source.unsplash.com/featured/800x400?mathematics,writing" alt="muTeX Handwriting to LaTeX" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>μTeX: Handwriting to LaTeX</h3>
         <p>
-          A browser-only app that feeds a live camera stream into Google Gemini's multimodal vision API and returns
-          LaTeX syntax for handwritten math equations — no server, no upload. Accessibility was a first-class
-          requirement: the Web Speech API narrates equation output in real time so visually impaired users can verify
-          transcriptions without switching tools. The entire stack is plain HTML/CSS/JS to keep deployment frictionless.
+          A browser-only tool that captures handwritten math equations via the MediaStream API and passes frames to
+          Google Gemini's multimodal vision endpoint, returning clean LaTeX syntax in real time with no server and no
+          upload required. Accessibility was a first-class design requirement: the Web Speech API narrates each
+          converted equation so visually impaired users can verify transcriptions without switching tools. The entire
+          stack runs in a single HTML file.
         </p>
         <div class="badge-row">
           <span class="badge">HTML</span>
@@ -740,15 +745,77 @@
         </div>
       </div>
 
+      <!-- shape-shift -->
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/800x400?three-dimensional,design" alt="ShapeShift 3D Generative App" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>ShapeShift: 3D Generative Web App</h3>
+        <p>
+          A full-stack creative application pairing Next.js 15 with Three.js for real-time 3D visualization and Google
+          Cloud Generative AI for content, with tRPC providing type-safe end-to-end API calls from client to a
+          Prisma-managed database. The architectural challenge was integrating Three.js rendering into React's reconciler
+          without triggering unnecessary re-renders, and streaming GCP Generative AI responses directly into the 3D
+          scene graph.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Next.js 15</span>
+          <span class="badge">TypeScript</span>
+          <span class="badge">Three.js</span>
+          <span class="badge">tRPC</span>
+          <span class="badge">GCP Generative AI</span>
+          <span class="badge">Prisma</span>
+          <span class="badge">Radix UI</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/karthikreddy78/shape-shift" target="_blank" rel="noopener" class="card-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.we-shapeshift.tech/" target="_blank" rel="noopener" class="card-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- MedSave -->
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/800x400?healthcare,medicine" alt="MedSave Medication Platform" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>MedSave: Medication Redistribution Platform</h3>
+        <p>
+          A marketplace connecting pharmacies holding surplus or near-expiry medications with nonprofits and community
+          health clinics serving underinsured patients. The platform uses the NDC Directory API to auto-fill drug
+          metadata from barcode input, Mapbox for proximity-ranked listings, and Google OAuth for role-based access
+          that separates donor and recipient workflows, all backed by a Flask REST API with a React and Tailwind
+          CSS frontend.
+        </p>
+        <div class="badge-row">
+          <span class="badge">React</span>
+          <span class="badge">Python</span>
+          <span class="badge">Flask</span>
+          <span class="badge">Tailwind CSS</span>
+          <span class="badge">Google OAuth</span>
+          <span class="badge">Mapbox</span>
+          <span class="badge">NDC Directory API</span>
+          <span class="badge">SQLite</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/karthikreddy78/med" target="_blank" rel="noopener" class="card-link">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
       <!-- springboot-645 -->
       <div class="card">
-        <h3>Spring Boot Microservice + CI/CD Pipeline</h3>
+        <img src="https://source.unsplash.com/featured/800x400?server,cloud" alt="Spring Boot CI/CD Pipeline" style="width:calc(100% + 3rem); height:160px; object-fit:cover; border-radius:6px 6px 0 0; margin:-1.5rem -1.5rem 0 -1.5rem;">
+        <h3>Spring Boot Microservice with CI/CD Pipeline</h3>
         <p>
-          A cloud-native Spring Boot service with a fully automated path from commit to production: a Jenkinsfile drives
-          Maven builds, Docker image assembly, and Kubernetes rolling deployments in sequence without manual steps. The
-          notable design choice was engineering zero-downtime releases via K8s readiness probes and a tuned
+          A cloud-native Spring Boot service with a complete automated delivery pipeline: a Jenkinsfile drives Maven
+          builds, Docker image assembly, and Kubernetes rolling deployments from a single commit trigger. The key design
+          decision was achieving zero-downtime releases through K8s readiness probes and a tuned
           <code style="font-family:'JetBrains Mono',monospace;font-size:0.8em;color:var(--accent)">RollingUpdate</code>
-          strategy — no service mesh required.
+          strategy, eliminating the need for a service mesh while maintaining safe deployments.
         </p>
         <div class="badge-row">
           <span class="badge">Java</span>
@@ -760,32 +827,6 @@
         </div>
         <div class="card-links">
           <a href="https://github.com/karthikreddy78/springboot-645" target="_blank" rel="noopener" class="card-link">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- movie-rev -->
-      <div class="card">
-        <h3>Movie Script Summarization (NLP)</h3>
-        <p>
-          Implements the NAACL 2024 "Select &amp; Summarize" pipeline: a RoBERTa-large scene saliency classifier first
-          filters low-signal scenes from full movie scripts, then a fine-tuned Longformer Encoder-Decoder (LED) generates
-          coherent summaries from only the retained content. The central finding — that pruning input beats feeding
-          everything — holds even under ROUGE evaluation, which rewards recall, making selective compression a
-          principled choice rather than a shortcut.
-        </p>
-        <div class="badge-row">
-          <span class="badge">Python</span>
-          <span class="badge">PyTorch</span>
-          <span class="badge">RoBERTa</span>
-          <span class="badge">Longformer (LED)</span>
-          <span class="badge">HuggingFace</span>
-          <span class="badge">NLP</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/karthikreddy78/movie-rev" target="_blank" rel="noopener" class="card-link">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.745 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
             GitHub
           </a>
@@ -807,11 +848,11 @@
         <div class="tl-header">
           <span class="tl-role">Software AI Engineer</span>
           <span class="tl-company">Dechen Consulting · Ford Motor Company</span>
-          <span class="tl-dates">Jul 2025 – Present</span>
+          <span class="tl-dates">Jul 2025 - Present</span>
         </div>
         <ul class="tl-bullets">
-          <li>Building LangChain RAG pipelines on Vertex AI with dynamic routing across GPT-4, Gemini, and Claude; automated QA and Spring Boot microservices backing Angular enterprise UIs.</li>
-          <li>Integrated SonarQube, FOSSA, and Cycode quality gates into CI — catching security and license issues before they reach staging.</li>
+          <li>Building LangChain RAG pipelines on Vertex AI with dynamic routing across GPT-4, Gemini, and Claude, alongside Spring Boot microservices and Angular enterprise UIs.</li>
+          <li>Integrated SonarQube, FOSSA, and Cycode quality gates into CI, catching security and license issues before they reach staging.</li>
         </ul>
       </div>
 
@@ -819,11 +860,11 @@
         <div class="tl-header">
           <span class="tl-role">Web Developer Graduate Assistant</span>
           <span class="tl-company">George Mason University</span>
-          <span class="tl-dates">2023 – 2025</span>
+          <span class="tl-dates">Jul 2024 - May 2025</span>
         </div>
         <ul class="tl-bullets">
-          <li>Shipped Spring Boot REST APIs on AWS EC2 with JWT / Cognito auth for student-facing services; migrated manual deploys to GitHub Actions, cutting release cycle time significantly.</li>
-          <li>MS Computer Science — GPA 3.93.</li>
+          <li>Shipped Spring Boot REST APIs on AWS EC2 with JWT/Cognito auth for student-facing services; migrated manual deploys to GitHub Actions, cutting release cycle time significantly.</li>
+          <li>MS Computer Science, GPA 3.93 (Aug 2023 - May 2025).</li>
         </ul>
       </div>
 
@@ -831,11 +872,11 @@
         <div class="tl-header">
           <span class="tl-role">Associate Consultant</span>
           <span class="tl-company">Capgemini · Citi Bank</span>
-          <span class="tl-dates">2021 – 2023</span>
+          <span class="tl-dates">Dec 2022 - Jul 2023</span>
         </div>
         <ul class="tl-bullets">
           <li>Designed event-driven microservices with RabbitMQ and Jenkins CI/CD; led a service decomposition initiative that reduced inter-team deployment coupling and improved release cadence.</li>
-          <li>Acted as the bridge between platform and product teams, translating compliance requirements into technical constraints on the service boundaries.</li>
+          <li>Translated compliance requirements into concrete technical constraints on service boundaries, acting as the link between platform and product teams.</li>
         </ul>
       </div>
 
@@ -843,11 +884,11 @@
         <div class="tl-header">
           <span class="tl-role">Software Engineer</span>
           <span class="tl-company">Capgemini · Citi Bank</span>
-          <span class="tl-dates">2019 – 2021</span>
+          <span class="tl-dates">Oct 2021 - Nov 2022</span>
         </div>
         <ul class="tl-bullets">
           <li>Owned PostgreSQL schema design and query optimization for core banking data flows; instrumented services with Splunk for real-time operational visibility.</li>
-          <li>Built JUnit 5 / Mockito test suites, raising coverage to 85 %+ across critical payment services.</li>
+          <li>Built JUnit 5/Mockito test suites, raising coverage to 85%+ across critical payment services.</li>
         </ul>
       </div>
 
@@ -855,7 +896,7 @@
         <div class="tl-header">
           <span class="tl-role">Software Engineer</span>
           <span class="tl-company">Manikanta Techno Solutions · J&amp;J</span>
-          <span class="tl-dates">2018 – 2019</span>
+          <span class="tl-dates">Aug 2020 - Sep 2021</span>
         </div>
         <ul class="tl-bullets">
           <li>Automated SQL and Python ETL pipelines feeding downstream analytics dashboards, replacing manual data-wrangling scripts with scheduled, observable jobs.</li>
